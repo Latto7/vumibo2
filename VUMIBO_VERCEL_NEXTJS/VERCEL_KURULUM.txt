@@ -1,0 +1,31 @@
+VUMIBO — VERCEL İÇİN HAZIR NEXT.JS PROJESİ
+
+Yöntem1 — GitHub üzerinden (önerilen)
+1. ZIP'i aç. package.json ile app, components, lib ve public klasörlerinin birlikte bulunduğu proje kökünü bir GitHub repository'sine yükle. public/assets içindeki görsel, font ve videolar da dahil olmalı.
+2. Vercel > Add New > Project > bu repository > Import.
+3. Framework Preset: Next.js. Root Directory: package.json'ın bulunduğu kök (repo köküne dosyaları koyduysan boş/default bırak).
+4. Build Command: npm run build. Install Command: npm ci. Output Directory: otomatik/default; dist veya public yazma.
+5. Deploy. Next.js sürümü package.json ve package-lock.json içinde kilitli.
+
+Yöntem2 — Bu bilgisayardan doğrudan
+Node.js22 veya24 yüklüyken VERCELE_YUKLE.cmd dosyasını çift tıkla. Vercel hesabına giriş yap, projeyi seç/oluştur, Next.js otomatik ayarlarını kabul et. Bu komut gerçek üretim yayını yapar; henüz bizim tarafımızdan çalıştırılmadı.
+Terminal ile aynı işlem: npx vercel@latest --prod
+
+Yerel önizleme
+npm ci
+npm run dev
+http://localhost:3000
+
+Müzik adresleri
+site-config.js içindeki spotify, appleMusic, youtubeMusic alanlarına resmî HTTPS adreslerini ekle. Boşken Coming soon görünür; adres ekleyince Listen now olur. YouTube @Vumibo hazır.
+
+Kendi alan adın
+Vercel > Project > Settings > Domains üzerinden bağla. İstersen NEXT_PUBLIC_SITE_URL ortam değişkenini gerçek https://alan-adin adresiyle ekle ve yeniden Deploy et; canonical, sosyal paylaşım ve sitemap bu adresi kullanır. Ayarlanmazsa Vercel'in verdiği üretim adresi otomatik kullanılır. Yerel pakette uydurma alan adı/canonical yok.
+
+İçerik
+İngilizce mevcut VUMIBO tasarımı, logolar, Blender araç görselleri, yerel fontlar ve iki sessiz animasyon önizlemesi dahil. Next.js App Router, React etkileşimleri; mobil menü, klavye ile karakter sekmeleri, video dialog, reduced-motion desteği. Harici form, kullanıcı hesabı, veritabanı veya ödeme anahtarı gerekmiyor.
+Önceki Sites projesi/publikasyon kimliği değiştirilmedi. Bu ayrı Vercel teslimidir; Vercel hesabında henüz dağıtım yapılmadı.
+
+Resmî belgeler (1 Ekim2026)
+https://nextjs.org/docs/app/getting-started/installation
+https://vercel.com/docs/frameworks/full-stack/nextjs
